@@ -1,0 +1,367 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amsthm, amscd, amssymb, amsfonts, mathtools,color}
+%\usepackage{tabu}
+\usepackage[all]{xy}
+\usepackage{mathrsfs}
+\usepackage{enumitem}
+\usepackage[T2A,T1]{fontenc}
+%\usepackage{rotating}
+\usepackage{multicol}
+\newcommand{\pinom}{\genfrac{[}{]}{0pt}{}}
+\usepackage{hyperref}
+
+\allowdisplaybreaks
+
+%\usepackage[basic,optics]{circ}
+%\usepackage[spanish]{babel}
+\usepackage[ansinew]{inputenc}
+\usepackage{graphicx,fancyhdr}
+
+%\usepackage[dvips, dvipsnames, usenames]{color}
+\newcommand{\com}[1]{\textcolor{blue}{\textbf{#1}}}
+\newcommand{\diag}{\operatorname{diag}}
+
+
+
+\newcommand{\pre}{\mathfrak{Pre}}
+\newcommand{\pref}{\mathfrak{Pre}_\textrm{fGK}}
+
+\newcommand{\post}{\mathfrak{Post}}
+\newcommand{\postf}{\mathfrak{Post}_{\textrm{fGK}}}
+
+\newcommand{\deriv}{\mathfrak d}
+\newcommand{\derv}{\mathfrak D}
+
+\newcommand{\Lie}{\operatorname{Lie}}
+
+\newcommand{\nucleo}{\mathbf R}
+\newcommand{\Nuc}{\mathcal O}
+\newcommand{\gen}{\mathbf{g}}
+\newcommand{\Gb}{\mathbf G}
+\newcommand{\Hb}{\mathbf H}
+\newcommand{\Bb}{\mathbf B}
+\newcommand{\uno}{{\mathbf 1}}
+
+\newcommand{\ya}{\mbox{\usefont{T2A}{\rmdefault}{m}{n}\cyrya}}
+\newcommand{\zh}{\bx}%{\mbox{\usefont{T2A}{\rmdefault}{m}{n}\cyrzh}}
+\newcommand{\Zh}{\mathbb X}%{\mbox{\usefont{T2A}{\rmdefault}{m}{n}\CYRZH}}
+
+
+\newcommand{\supp}{\operatorname{supp}}
+\newcommand{\verma}{M}
+
+\newcommand{\hopfuno}{\mathtt{H}}
+\newcommand{\hopfdos}{\mathtt{K}}
+\newcommand{\hopfdouble}{\mathtt{D}}
+\newcommand{\xb}{x}%{\mathbf x}
+\newcommand{\ub}{u}%{\mathbf u}
+
+
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{coro}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{prop}[theorem]{Proposition}
+\newtheorem{claim}{Claim}[section]
+
+\newtheorem{paso}{Step}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+\newtheorem*{strategy}{Strategy}
+\newtheorem{notation}{Notation}
+
+
+\newtheorem{xca}[theorem]{Exercise}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newtheorem{step}{Case}
+\newtheorem{case}{Case}
+\newtheorem{caso}{Step}
+\newtheorem{posi}{}[caso]
+
+\newtheorem{caso2}{Step}
+\newtheorem{posic}{}[caso2]
+
+\newcommand{\pf}{\begin{proof}}
+\newcommand{\epf}{\end{proof}}
+
+\newcommand{\sfm}{\mathsf{m}}
+\newcommand{\sfM}{\mathsf{M}}
+\newcommand{\sfr}{\mathsf{r}}
+\newcommand{\sfs}{\mathsf{s}}
+\newcommand{\sft}{\mathsf{t}}
+\newcommand{\sfu}{\mathsf{u}}
+\newcommand{\sfW}{\mathsf{W}}
+\newcommand{\sfy}{\mathsf{y}}
+\newcommand{\y}[2]{\sfy_{#1}^{(#2)}}
+
+\newcommand{\lu}{\mathcal{L}}
+\newcommand{\luq}{\lu_{\bq}}
+\newcommand{\fO}{\mathfrak O}
+\newcommand{\spl}{\mathfrak{sl}}
+
+\newcommand{\fjdos}{\hspace{-1pt}j + \frac{1}{2}}
+\newcommand{\fkdos}{\hspace{-1pt}k + \frac{1}{2}}
+
+\newcommand{\fudos}{\hspace{-1pt}\frac{3}{2}}
+\newcommand{\fdos}{\tfrac{3}{2}}
+\newcommand{\futres}{\hspace{-1pt}\frac{5}{2}}
+\newcommand{\ftres}{\tfrac{5}{2}}
+\newcommand{\inc}{\mathscr{I}}
+
+%Itemize
+\newcommand{\vi}{\textbf{(i)} }
+\newcommand{\vii}{\textbf{(ii)} }
+\newcommand{\viii}{\textbf{(iii)} }
+\newcommand{\viv}{\textbf{(iv)} }
+\newcommand{\vv}{\textbf{(v)} }
+\newcommand{\vvi}{\textbf{(vi)} }
+\newcommand{\vvii}{\textbf{(vii)} }
+\newcommand{\vviii}{\textbf{(viii)} }
+\newcommand{\vix}{\textbf{(ix)} }
+\newcommand{\vx}{\textbf{(x)} }
+%-----------------------------------------------------
+
+%Letters
+\newcommand{\ba}{ \mathbf{a}}
+\newcommand{\kk}{ \mathbf{k}}
+\newcommand{\ku}{ \Bbbk}
+\newcommand{\fp}{\mathbb F_p}
+
+\newcommand{\kut}{ \ku^{\times}}
+\newcommand{\Ck}{\mathbb C}
+\newcommand{\G}{\mathbb G}
+\newcommand{\gb}{\mathbf g}
+\newcommand{\ghost}{\mathscr{G}}
+\newcommand{\as}{\mathtt{a}}
+\newcommand{\qmb}{\mathtt{q}}
+\newcommand{\x}{\mathtt{x}}
+\newcommand{\yt}{\mathtt{y}}
+
+\newcommand{\wtoba}{\widetilde{\toba}}
+\newcommand{\ttoba}{\widetilde{\mathfrak B}}
+
+
+\newcommand{\I}{\mathbb I}
+\newcommand{\Iw}{\mathbb I^{\dagger}}
+\newcommand{\idd}{\mathbb I^{\ddagger}}
+\newcommand{\J}{\mathbb J}
+\newcommand{\N}{\mathbb N}
+\newcommand{\bn}{\mathbf n}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\Sb}{\mathbb S}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\Uu}{\mathbb U}
+\newcommand{\V}{\mathbb V}
+\newcommand{\Vb}{\mathbb V_{\text{block}}}
+\newcommand{\Vs}{\mathbb V_{\text{ss}}}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\zt}{\Z^{\zeta}}
+
+\renewcommand{\_}[1]{_{\left( #1 \right)}}
+\renewcommand{\^}[1]{^{\left( #1 \right)}}
+
+\newcommand{\sx}{\mathsf{x}}
+\newcommand{\tx}{\mathtt{x}}
+\newcommand{\tz}{\mathtt{z}}
+\newcommand{\sy}{\mathsf{y}}
+\newcommand{\cA}{\mathcal{A}}
+\newcommand{\cB}{\mathcal{B}}
+\newcommand{\cO}{\mathcal{O}}
+\newcommand{\cE}{\mathcal{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\cBt}{\widetilde{\mathcal{B}}}
+\newcommand{\dpn}{\widetilde{\mathcal{B}}}
+\newcommand{\cC}{\mathcal{C}}
+\newcommand{\Cf}{\cC_{\text{GK-f}}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\cU}{\mathcal{U}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\cH}{\mathcal{H}}
+\newcommand{\cI}{\mathcal{I}}
+\newcommand{\cJ}{\mathcal{J}}
+\newcommand{\cL}{\mathcal{L}}
+\newcommand{\Pc}{{\mathcal P}}
+\newcommand{\cR}{\mathcal{R}}
+\newcommand{\Ss}{{\mathcal S}}
+\newcommand{\T}{\mathcal{T}}
+\newcommand{\cV}{\mathcal{V}}
+\newcommand{\X}{\mathcal{X}}
+\newcommand{\Xf}{\X_{\text{fin}}}
+\newcommand{\Xif}{\X_{\infty}}
+\newcommand{\JJ}{\mathcal{J}}
+
+
+\newcommand{\g}{\mathfrak g}
+\newcommand{\kh}{\mathfrak h}
+\newcommand{\ngo}{\mathfrak n}
+\newcommand{\Ug}{\mathfrak U}
+\newcommand{\Fg}{\mathfrak F}
+
+\newcommand{\lstr}{\mathfrak L}
+\newcommand{\cyc}{\mathfrak C}
+\newcommand{\pos}{\mathfrak P}
+
+%------------------------------------------------------
+
+%Operatorname
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\Alg}{\Hom_{\text{alg}}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Frac}{\operatorname{Frac}}
+\newcommand{\AuH}{\Aut_{\text{Hopf}}}
+\newcommand{\coker}{\operatorname{coker}}
+\newcommand{\car}{\operatorname{char}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\gr}{\operatorname{gr}}
+\newcommand{\GK}{\operatorname{GKdim}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\rk}{\operatorname{rk}}
+\newcommand{\soc}{\operatorname{soc}}
+\newcommand{\Obj}{\operatorname{Obj}}
+\newcommand\Char{\operatorname{char}}
+\newcommand{\Svec}{\operatorname{\textsf{sVec}}}
+\newcommand{\svec}{\operatorname{\textsf{svec}}}
+\newcommand{\vect}{\operatorname{Vec}}
+\newcommand{\srep}{\operatorname{\textsf{sRep}}}
+\newcommand{\ev}{\operatorname{ev}}
+\newcommand{\evt}{\widetilde{\operatorname{ev}}}
+\newcommand{\coev}{\operatorname{coev}}
+\newcommand{\coevt}{\widetilde{\operatorname{coev}}}
+\newcommand{\sTr}{\operatorname{sTr}_q}
+\newcommand{\sTrNormal}{\operatorname{sTr}}
+\newcommand{\Tr}{\operatorname{Tr}}
+\newcommand{\Irr}{\operatorname{irrep}}
+\newcommand{\IRR}{\operatorname{Irrep}}
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Res}{\operatorname{Res}}
+%------------------------------------------------------
+
+%Others
+\newcommand{\doble}{\mathfrak d}
+\newcommand{\Bdiag}{\mathcal{B}^\mathrm{diag}}
+\newcommand{\Vdiag}{\cV^\mathrm{diag}}
+\newcommand{\toba}{\mathscr{B}}
+\newcommand{\Ds}{\mathscr{D}}
+\newcommand{\ot}{\otimes}
+\newcommand{\realroots }{\boldsymbol{\Delta }^{\mathrm{re}}}
+\newcommand{\roots }{\boldsymbol{\Delta }}
+\newcommand{\siderem}[1]{$^{(*)}$\marginpar{#1}}
+
+\newcommand{\yd}[1]{{}^{ #1 }_{ #1 }\mathcal{YD}}
+\newcommand{\dy}[1]{\mathcal{YD}^{ #1 }_{ #1 }}
+\newcommand{\lmod}[1]{{}_{ #1 }\mathcal{M}}
+
+\DeclareRobustCommand{\stirling}{\genfrac []{0pt}{}}
+\DeclareRobustCommand{\stirlingtwo}{\genfrac \{\}{0pt}{}}
+\newcommand{\rightarrowdbl}{\rightarrow\mathrel{\mkern-14mu}\rightarrow}
+
+\newcommand{\xrightarrowdbl}[2][]{%
+\xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+}
+
+\newcounter{tabla}\stepcounter{tabla}
+\renewcommand{\thetabla}{\Roman{tabla}}
+
+%\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+%\DeclarePairedDelimiter\lfloor{\lfloor}{\rfloor}
+
+\begin{document}
+\noindent
+\title[Tokenomics of the Noether protocol]
+{Tokenomics of the Noether protocol}
+%\author[Pe\~na Pollastri]
+%{H\'ector Pe\~na Pollastri}
+
+
+
+
+
+\thanks{}
+
+
+
+%\keywords{Hopf algebras, Nichols algebras, Gelfand-Kirillov dimension.\\MSC2020: 16T05, 16T20, 17B37, 17B62.}
+
+\maketitle
+
+\section*{Introduction}
+This document gives a detailed overview about how the NOETH token is produced, distributed within their users, and how one can spend tokens to buy computing power within the system. 
+
+
+\section{The distribution of the Token by epochs}
+The token is distributed in epochs which will coincide with the ones from Cardano blockchain by design. We then enumarate the epochs $n=1,2,\dots$ with natural numbers, where epoch $1$ is exactly the one where the project is launched. 
+For the epoch $n\in\N$ we distribute a certain quantity of tokens $\kappa_n$. Hence we have a function $\kappa\colon \N \longrightarrow \mathbb{R}$. To determine exactly how $\kappa$ depends on $n$ we first need to make the following definition.
+
+\begin{definition}
+	For each epoch $n$, we define the \emph{heat of the network} $h_n$ as how many transactions occurs in this epoch.
+\end{definition}
+
+This concept measures how big the demand of the token is, and the emission rate will depend of this variable. Let $\varphi\colon \N \times \mathbb{R} \longrightarrow \mathbb{R}$ be defined as
+\begin{align*}
+\varphi(n,r) = \begin{cases}
+r & \text{ If } 100 | n,\\
+r/2 &\text{ If } 100 \nmid n,
+\end{cases}
+\end{align*}
+
+ Specifically $\kappa_n$ is defined recursively as follows:
+
+\begin{align*}
+\kappa_{n+1} = \varphi\left(n,\kappa_n + \frac{\alpha (1+ h_n)}{n}\right)
+\end{align*}
+  
+
+
+
+
+ Each epoch will have a fixed duration $T$ that we will be determined in accordance to the technical details of the implementation. For each epoch we distribute $K$ tokens. The number $K$ is not constant, but a function $K(N,T)$ where $N$ is the quantity of users participating in the network in the current epoch and $T$ is the epoch itself. Now suppose we have $N$ users in the network indexed by a number \newline $i\in\{1,\dots,N\}$. Each user $i$ has a metric number $M_i$ and a number $T_i$ that is the fraction of the time $T$ that the user lent its computing power.
+
+Now the number of tokens $K_i$ that the user $i$ receives is defined to be
+\begin{align*}
+K_i = \frac{M_i T_i}{\sum_{j=1}^{N} M_j T_j} p K, && \text{with }p\in(0,1).
+\end{align*}
+In this way we guarantee $pK = \sum_{i=1}^{N} K_i$. The remaining $(1-p)K$ tokens are going for the developers and the universities.
+
+\section*{A credit system for measuring computing power}
+
+
+
+\section*{How to spend the token}
+
+
+The NOETH Token is distributed according to the computing power lent by its users.
+
+
+
+
+ Hence one ot the first problems is to measure how much computing power each user provides. 
+
+
+
+
+
+
+The project BOINC has an in built credit system  
+
+
+
+
+
+For this we use the so called metric functions for computing problems. For each problem it is possible to define a function $M$ that quantifies performance of a computer for solving it. We will determine metrics for the most commons problems in parallel computing, and taking an average of that many metrics we will assign an unique metric for each user.  
+\begin{thebibliography}{MPP}
+	\bibitem[KM]{kermack} Kermack William Ogilvy and McKendrick A. G. \emph{A contribution to the mathematical theory of epidemics}. Proc. R. Soc. Lond. (1927) A115700-721.
+\end{thebibliography}
+
+\end{document}
